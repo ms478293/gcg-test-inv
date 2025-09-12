@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Eye } from 'lucide-react';
-import { featuredProducts } from '../data/mock';
+import { useFeaturedProducts } from '../hooks/useProducts';
 
 const FeaturedProducts = () => {
   const formatPrice = (price) => {
