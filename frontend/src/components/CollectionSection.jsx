@@ -85,7 +85,7 @@ const CollectionSection = () => {
 
         {/* Collections Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {collections.map((collection, index) => (
+          {displayCollections.map((collection, index) => (
             <div 
               key={collection.id}
               className="group relative overflow-hidden cursor-pointer transform hover:scale-[1.02] transition-all duration-700"
