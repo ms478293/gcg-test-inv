@@ -152,10 +152,12 @@ function App() {
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
-              <Route path="products" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Products Management</h2><p className="text-gray-600 mt-4">Product management interface coming soon...</p></div>} />
-              <Route path="collections" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Collections Management</h2><p className="text-gray-600 mt-4">Collection management interface coming soon...</p></div>} />
-              <Route path="upload" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Upload Center</h2><p className="text-gray-600 mt-4">Image upload interface coming soon...</p></div>} />
-              <Route path="analytics" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Analytics</h2><p className="text-gray-600 mt-4">Analytics dashboard coming soon...</p></div>} />
+              <Route path="products" element={<ProductsList />} />
+              <Route path="products/new" element={<ProductForm />} />
+              <Route path="products/:id/edit" element={<ProductForm isEdit={true} />} />
+              <Route path="collections" element={<CollectionsManager />} />
+              <Route path="upload" element={<ImageUploadCenter />} />
+              <Route path="analytics" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Analytics Dashboard</h2><p className="text-gray-600 mt-4">Advanced analytics coming soon...</p></div>} />
             </Route>
             
             <Route index element={<Home />} />
