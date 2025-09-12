@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the complete GCG Eyewear luxury eyewear e-commerce backend system. Test Core API Endpoints, Authentication System, Product Management, Database Integration, and Error Handling."
+user_problem_statement: "Test the complete luxury eCommerce admin system for GCG Eyewear including Admin Login & Navigation, Product Management, Collections Management, Upload Center, UI/UX Testing, and Data Integration Testing."
 
 backend:
   - task: "Health Check API Endpoints"
