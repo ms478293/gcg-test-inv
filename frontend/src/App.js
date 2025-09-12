@@ -165,6 +165,7 @@ function App() {
             
             <Route index element={<Home />} />
           </Routes>
+          <Toaster />
         </BrowserRouter>
       </div>
     </AuthProvider>
