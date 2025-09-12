@@ -6,6 +6,9 @@ import axios from "axios";
 // Context Providers
 import { AuthProvider } from "./contexts/AuthContext";
 
+// UI Components
+import { Toaster } from "./components/ui/toaster";
+
 // Public Components
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
