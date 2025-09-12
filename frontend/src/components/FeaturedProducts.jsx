@@ -3,9 +3,51 @@ import { Heart, Eye } from 'lucide-react';
 import { useFeaturedProducts } from '../hooks/useProducts';
 
 const FeaturedProducts = () => {
+  const { products: featuredProducts, loading, error } = useFeaturedProducts(4);
+
   const formatPrice = (price) => {
     return `€${price.toLocaleString()}`;
   };
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-light tracking-wider text-black mb-6">
+              Featured Pieces
+            </h2>
+            <div className="w-24 h-px bg-black mx-auto mb-8"></div>
+          </div>
+          
+          {/* Loading skeleton */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm animate-pulse">
+                <div className="h-72 bg-gray-200"></div>
+                <div className="p-6 space-y-3">
+                  <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                  <div className="h-6 bg-gray-200 rounded w-2/3"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <div className="text-red-600">Error loading featured products: {error}</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-24 bg-gray-50">
