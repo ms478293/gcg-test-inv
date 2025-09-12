@@ -18,6 +18,10 @@ import Footer from "./components/Footer";
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminDashboard from "./components/admin/AdminDashboard";
+import ProductForm from "./components/admin/ProductForm";
+import ProductsList from "./components/admin/ProductsList";
+import CollectionsManager from "./components/admin/CollectionsManager";
+import ImageUploadCenter from "./components/admin/ImageUploadCenter";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
