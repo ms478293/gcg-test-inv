@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { collections } from '../data/mock';
+import { useCollections } from '../hooks/useCollections';
 
 const CollectionSection = () => {
   return (
